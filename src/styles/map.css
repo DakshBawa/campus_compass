@@ -1,0 +1,10 @@
+/* Map overlay: route line, pins and hazard markers */
+.map-frame { aspect-ratio: 1600 / 892; }
+.route-casing { stroke: #fff; stroke-width: 9; stroke-linecap: round; }
+.route-line { stroke: #0b1f4b; stroke-width: 5; stroke-linecap: round; }
+.route-line.shortcut { stroke-dasharray: 10 8; animation: march 1s linear infinite; }
+.pin { transform: translate(-50%, -100%); }
+.pin-dot { width: 18px; height: 18px; border: 3px solid #fff; border-radius: 9999px; box-shadow: 0 1px 4px #0006; }
+.hazard-marker { transform: translate(-50%, -50%); }
+@keyframes march { to { stroke-dashoffset: -18; } }
+@media (prefers-reduced-motion: reduce) { .route-line.shortcut { animation: none; } }
